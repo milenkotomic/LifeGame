@@ -8,10 +8,10 @@ public class LifeGameThread implements Runnable {
     int threadNumber;
     int threadsNumber;
     int loops;
-    Object cube1; // TODO: cambiar tipo
-    Object cube2 = new Object(); // TODO: cambiar tipo
+    Cube cube1;
+    Cube cube2 = new Cube(cube1.getSize());
 
-    public LifeGameThread(Object cube, int thread, int threads, int loops){
+    public LifeGameThread(Cube cube, int thread, int threads, int loops){
         this.cube1 = cube;
         this.threadNumber = thread;
         this.threadsNumber = threads;
